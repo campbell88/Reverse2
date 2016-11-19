@@ -6,10 +6,12 @@ public class ReverseApp {
 		
 		int value;  // user inputs values to be reversed 
 		int reverse; // declare variable to be printed 
+		String cont = "y"; 
 		
 		
 		Scanner input = new Scanner(System.in); // creating scanner object 
 		
+		while (cont == "y") {
 		System.out.println("Enter Numbers Here"); // prompt user to enter numbers 
 		
         value = input.nextInt(); // take user's input and set to value 
@@ -23,9 +25,15 @@ public class ReverseApp {
 			
 			System.out.print(reverse);  // print out variable declared as "reverse" 
 			value = value / 10 ; // store the quotient without the remainder because "int" only shows whole numbers 
-			
-			
 		}
-	}	
+		
+		System.out.println("\rWould you like to continue?");
+		cont = input.next();
+		}
+		System.out.println("Goodbye!"); 
+		
+	}
+	
+	
 
 }
