@@ -11,7 +11,7 @@ public class ReverseApp {
 		
 		Scanner input = new Scanner(System.in); // creating scanner object 
 		
-		while (cont == "y") {
+		while (cont.equalsIgnoreCase("y")) {
 		System.out.println("Enter Numbers Here"); // prompt user to enter numbers 
 		
         value = input.nextInt(); // take user's input and set to value 
@@ -32,8 +32,9 @@ public class ReverseApp {
 		}
 		System.out.println("Goodbye!"); 
 		
+		input.close(); 
+		
 	}
 	
 	
-
-}
+	}
